@@ -41,11 +41,19 @@ function fetchBreeds() {
 //take breeds, put them into an array
 function parseBreeds(json) {
   const dogUl = document.querySelector("#dog-breeds");
-  const myObject = json.message;
-  for (const key in myObject) {
+  const allBreeds = json.message;
+  for (const breed in allBreeds) {
       let li = document.createElement("li")
-      li.textContent = key
+      if (allBreeds[breed].length > 0) {
+        for (const element of allBreeds[breed]) {
+          li.textContent = `${element} ${breed}`)
+          dogUl.appendChild(li)
+        }
+      }
+      else {
+      li.textContent = breed
       dogUl.appendChild(li)
+      }
     }
   }
 

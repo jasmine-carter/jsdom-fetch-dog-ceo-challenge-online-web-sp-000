@@ -83,7 +83,7 @@ document.querySelector("#breed-dropdown").addEventListener("click", event => {
 
 function hideDoggos(selection) {
   let breedList = document.querySelector("#dog-breeds")
-  for (let item of list) {
+  for (let item of breedList) {
     if (item.textContent.startsWith(selection)){
     item.style.visibility = "hidden"
     }

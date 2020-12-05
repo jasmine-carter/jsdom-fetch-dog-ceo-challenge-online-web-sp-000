@@ -58,14 +58,15 @@ function parseBreeds(json) {
     }
   }
 
+  document.querySelectorAll("li").forEach(item => {
+      item.addEventListener("click", event => {
+        item.style.color = "coral"
+      })
+    })
 //on page load, get random dog images
 //on page load fetch all the dog breeds returned
 document.addEventListener("DOMContentLoaded", () => {
   fetchDoggos();
   fetchBreeds();
-  document.querySelectorAll("li").forEach(item => {
-    item.addEventListener("click", event => {
-      item.style.color = "coral"
-    })
-  })
+
 })

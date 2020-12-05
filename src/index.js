@@ -57,7 +57,6 @@ function parseBreeds(json) {
           li.textContent = `${element} ${breed}`
           li.className = "doggo"
           dogUl.appendChild(li)
-          selectBreedByLetterListener(selection)
         }
       }
       else {
@@ -65,7 +64,6 @@ function parseBreeds(json) {
       li.textContent = breed
       li.className = "doggo"
       dogUl.appendChild(li)
-      selectBreedByLetterListener(selection)
       }
     }
     document.querySelectorAll("li").forEach(item => {

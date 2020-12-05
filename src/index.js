@@ -56,7 +56,7 @@ function parseBreeds(json) {
       dogUl.appendChild(li)
       }
     }
-  function  document.querySelectorAll("li").addEventListener("click", function(event){
+    document.querySelectorAll("li").addEventListener("click", function(event){
       let li = document.querySelector("li")
       li.style.color = "coral"
     })

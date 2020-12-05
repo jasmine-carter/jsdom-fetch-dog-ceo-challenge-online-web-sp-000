@@ -48,8 +48,7 @@ function parseBreeds(json) {
           let li = document.createElement("li")
           li.textContent = `${element} ${breed}`
           dogUl.appendChild(li)
-          document.getElementById("#dog-breeds").addEventListener("click", function(event){
-            let li = document.querySelector("li")
+          document.querySelector("li").addEventListener("click", function(event){
             li.style.color = "coral"
           })
         }
@@ -58,8 +57,7 @@ function parseBreeds(json) {
         let li = document.createElement("li")
       li.textContent = breed
       dogUl.appendChild(li)
-      document.getElementById("#dog-breeds").addEventListener("click", function(event){
-        let li = document.querySelector("li")
+      document.querySelector("li").addEventListener("click", function(event){
         li.style.color = "coral"
       })
       }

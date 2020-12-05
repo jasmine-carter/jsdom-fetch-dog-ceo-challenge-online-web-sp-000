@@ -66,6 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.querySelector("li").addEventListener("click", function(event){
-  let li = document.querySelector("li").style.color = "coral"
+  let li = document.querySelector("li")
   li.style.color = "coral"
 })

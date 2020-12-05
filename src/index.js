@@ -63,9 +63,9 @@ function parseBreeds(json) {
 document.addEventListener("DOMContentLoaded", () => {
   fetchDoggos();
   fetchBreeds();
-})
-document.querySelectorAll("li").forEach(item => {
-  item.addEventListener("click", event => {
-    item.style.color = "coral"
+  document.querySelectorAll("li").forEach(item => {
+    item.addEventListener("click", event => {
+      item.style.color = "coral"
+    })
   })
 })

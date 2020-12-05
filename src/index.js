@@ -78,7 +78,7 @@ document.querySelector("#breed-dropdown").addEventListener("click", event => {
   //for each li in dog-breeds ul, if textContent starts with value
   const filter = document.querySelector("#breed-dropdown")
 
-}
+})
 
 function hideDoggos () {
   let selection = filter.options[filter.selectedIndex].value

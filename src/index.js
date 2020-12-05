@@ -64,3 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchDoggos();
   fetchBreeds();
 })
+
+document.querySelector("li")addEventListener("click", () => {
+  document.querySelector("li").style.color = "coral"
+})

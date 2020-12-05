@@ -48,18 +48,12 @@ function parseBreeds(json) {
           let li = document.createElement("li")
           li.textContent = `${element} ${breed}`
           dogUl.appendChild(li)
-          document.querySelector("li").addEventListener("click", function(event){
-            li.style.color = "coral"
-          })
         }
       }
       else {
         let li = document.createElement("li")
       li.textContent = breed
       dogUl.appendChild(li)
-      document.querySelector("li").addEventListener("click", function(event){
-        li.style.color = "coral"
-      })
       }
     }
   }

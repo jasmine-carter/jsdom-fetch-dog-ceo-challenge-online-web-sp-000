@@ -77,11 +77,11 @@ function parseBreeds(json) {
 document.querySelector("#breed-dropdown").addEventListener("click", event => {
   //for each li in dog-breeds ul, if textContent starts with value
   const filter = document.querySelector("#breed-dropdown")
-
+  let selection = filter.options[filter.selectedIndex].value
+  hideDoggos(selection)
 })
 
-function hideDoggos () {
-  let selection = filter.options[filter.selectedIndex].value
+function hideDoggos(selection) {
   let breedList = document.querySelector("#dog-breeds")
   for (let item of list) {
     if (item.textContent.startsWith(selection)){

@@ -74,7 +74,7 @@ function parseBreeds(json) {
   }
 
 // filter breeds that start with letter from a dropdown
-document.querySelector("#breed-dropdown").addEventListener("click", event => {
+document.querySelector("#breed-dropdown").addEventListener("changed", event => {
   //for each li in dog-breeds ul, if textContent starts with value
   const filter = document.querySelector("#breed-dropdown")
   let selection = filter.options[filter.selectedIndex].value

@@ -56,6 +56,11 @@ function parseBreeds(json) {
       dogUl.appendChild(li)
       }
     }
+    document.querySelector("li").addEventListener("click", function(event){
+      let li = document.querySelector("li")
+      li.style.color = "coral"
+    })
+
   }
 
 //on page load, get random dog images
@@ -63,10 +68,5 @@ function parseBreeds(json) {
 document.addEventListener("DOMContentLoaded", () => {
   fetchDoggos();
   fetchBreeds();
-  
-  document.querySelector("li").addEventListener("click", function(event){
-    let li = document.querySelector("li")
-    li.style.color = "coral"
-  })
 
 })

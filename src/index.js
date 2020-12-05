@@ -1,3 +1,10 @@
+//on page load, get random dog images
+//on page load fetch all the dog breeds returned
+document.addEventListener("DOMContentLoaded", () => {
+  fetchDoggos();
+  fetchBreeds();
+})
+
 console.log('%c HI', 'color: firebrick')
 const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
 const breedUrl = 'https://dog.ceo/api/breeds/list/all'
@@ -58,15 +65,8 @@ function parseBreeds(json) {
     }
   }
 
-//on page load, get random dog images
-//on page load fetch all the dog breeds returned
-document.addEventListener("DOMContentLoaded", () => {
-  fetchDoggos();
-  fetchBreeds();
-
 document.querySelectorAll("li").forEach(item => {
     item.addEventListener("click", event => {
       item.style.color = "coral"
     })
   })
-})

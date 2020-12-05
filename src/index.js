@@ -46,7 +46,7 @@ function parseBreeds(json) {
       let li = document.createElement("li")
       if (allBreeds[breed].length > 0) {
         for (const element of allBreeds[breed]) {
-          li.textContent = `${element} ${breed}`)
+          li.textContent = `${element} ${breed}`
           dogUl.appendChild(li)
         }
       }

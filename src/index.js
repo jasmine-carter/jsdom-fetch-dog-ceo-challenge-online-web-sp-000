@@ -74,21 +74,20 @@ function parseBreeds(json) {
   }
 
 // filter breeds that start with letter from a dropdown
-document.querySelector("#breed-dropdown").addEventListener("onchange", event => {
-  //for each li in dog-breeds ul, if textContent starts with value
+function selectBreedByLetterListener(selection) {
   const filter = document.querySelector("#breed-dropdown")
-  let selection = filter.options[filter.selectedIndex].value
-  hideDoggos(selection)
-})
+  filter.addEventListener("change", function (event) {
+    let selection = filter.options[filter.selectedIndex].value
+    selectBreedsStartingWing(selection);
+  })
 
-function hideDoggos(selection) {
-  let breedList = document.querySelector("#dog-breeds").children
-  for (let i=0; i<breedList.length; i++) {
-    if (breedList[i].textContent.startsWith(selection)){
-    breedList[i].style.visibility = "hidden"
-    }
-    else {
-      breedList[i].style.visibility = "visible"
-    }
+  function selectBreedsStartingWing(selection) {
+    updateList(breeds.filter(breed =>breed.startsWith(selection)))
   }
+}
+
+function updateList(breeds) {
+  let breedList = document.querySelector("#dog-breeds");
+  removeChildren(breedList);
+  breeds.forEach(breed => addBreed(breed));
 }

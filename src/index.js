@@ -88,7 +88,7 @@ function hideDoggos(selection) {
     breedList[i].style.visibility = "hidden"
     }
     else {
-      breed.style.visibility = "visible"
+      breedList[i].style.visibility = "visible"
     }
   }
 }

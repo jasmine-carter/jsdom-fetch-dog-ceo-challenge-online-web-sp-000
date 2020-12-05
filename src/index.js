@@ -55,12 +55,14 @@ function parseBreeds(json) {
         for (const element of allBreeds[breed]) {
           let li = document.createElement("li")
           li.textContent = `${element} ${breed}`
+          li.className = "doggo"
           dogUl.appendChild(li)
         }
       }
       else {
         let li = document.createElement("li")
       li.textContent = breed
+      li.className = "doggo"
       dogUl.appendChild(li)
       }
     }
@@ -70,3 +72,14 @@ function parseBreeds(json) {
         })
       })
   }
+
+// filter breeds that start with letter from a dropdown  
+document.querySelector("#breed-dropdown").addEventListener("click", event => {
+  //for each li in dog-breeds ul, if textContent starts with value
+  const filter = document.querySelector("#breed-dropdown")
+  let selection = filter.options[filter.selectedIndex].value
+  let breedList = document.querySelector("#dog-breeds")
+  
+  
+  
+})
